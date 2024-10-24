@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+   
+
+    <div class="main_div">
+      <div id="app"></div>
+      <header class="header">
+        <h2 class="f"> <img class="foto1" src="./images/Vector.png" alt="">NOTES</h2>
+        
+          <h2> <img class="foto2" src="./images/notes.png" alt="">Всего заметок: <span id="note-count">0</span></h2>
+      </header>
+      <main>
+          <form class="note-form" name="notes">
+            <label for="note-title">Название заметки</label>
+              <input type="text" id="note-title" placeholder="Напишите название новой заметки..." maxlength="50">
+              
+    <div class="bok3">
+      <div class="bok1"> 
+        <label for="note-text">Описание новой заметки</label>
+        <textarea id="note-text" placeholder="Напишите описание новой заметки..."></textarea>
+      </div>
+        <div class="bok">
+          
+          <fieldset class="fieldset">
+            <legend class="label">Выберите цвет заметки</legend>
+            <ul class="radio-list">
+              <li>
+                <input checked class="radio" type="radio" name="color" value="yellow" aria-label="yellow" />
+              </li>
+              <li>
+                <input class="radio" type="radio" name="color" value="red" aria-label="red" />
+              </li>
+              <li>
+                <input class="radio" type="radio" name="color" value="green" aria-label="green" />
+              </li>
+              <li>
+                <input class="radio" type="radio" name="color" value="blue" aria-label="blue" />
+              </li>
+              <li>
+                <input class="radio" type="radio" name="color" value="purple" aria-label="purple" />
+              </li>
+            </ul>
+          </fieldset>
+        <button type="submit">Добавить заметку</button>
+        </div>
+    </div>          
+ 
+   
+           
+
+            
+          
+          
+          </form>
+  
+          <div class="filter-box hidden">
+            <label><input type="checkbox" id="filter-favorite"> Показать только избранные заметки</label>
+          </div>
+          <ul class="notes-list">
+            <!-- Сюда будут рендерится заметки из JavaScript -->
+          </ul>
+          <div class="no-notes-message hidden">
+            У вас нет еще ни одной заметки. Заполните поля выше и создайте свою первую заметку!
+          </div>
+          <div class="messages-box">
+              <!-- Сюда будут рендерится информационные сообщения из JavaScript -->
+          </div>
+      </main>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
